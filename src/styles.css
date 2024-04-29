@@ -1,0 +1,158 @@
+@font-face {
+  font-family:'myfont' ;
+  src: url('./fonts/samurai-blast-font/SamuraiBlast-YznGj.ttf');
+}
+@font-face {
+  font-family:'head';
+  src: url('./fonts/mighty-souly-font/MightySouly-lxggD.ttf');
+}
+.App {
+    text-align: center;
+    
+  }
+  
+  h1{
+    font-family:head;
+    letter-spacing:normal;
+    font-size:4em;
+    color: darkcyan;
+    font-weight: bolder;
+  }
+  h2{
+    font-family:myfont;
+    letter-spacing: 0.1em;
+    color: darkred;
+    font-size: xx-large;
+  }
+  
+  .board {
+    width: 400px;
+    height: 400px;
+    border: 5px solid #C6DACA;
+    background-image: url('./images/Pink.jpeg');
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  
+  /* .snake-segment {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+  } */
+  .snake {
+    position: relative;
+  }
+  
+  .snake-segment {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%; 
+    position: absolute;
+  }
+  
+  .snake-head {
+    width: 20px;
+    height: 20px;
+    background-color: darkgreen; 
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+
+
+
+  .food {
+    width: 20px;
+    height: 20px;
+    background-color: transparent; 
+    position: absolute;
+  }
+  
+  .food::before {
+    content: '\1F34E'; /*apple ka code*/
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family:monospace,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #31a571;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  section {
+    padding: 140px;
+    position:absolute;
+    background-image: url('./images/score-removebg-preview.png');
+    background-position: 54px center; 
+    background-size:contain;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  section p{
+    margin-top:0;
+    margin-bottom: 78%;
+    margin-left: 50px;
+    font-size:larger;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    color:#33233d;
+  }
+  section h3{
+    margin-left: 90px;
+    margin-top: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    color: #94183b;
+
+  }
+  .insturction{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#33233d;
+    font-weight: 800;
+
+  }
+  .difficulty {
+    margin-top: 20px;
+    
+  }
+  
+  .difficulty label {
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 10px;
+    font-weight:bold;
+  }
+  
+  .difficulty select {
+    font-size: 16px;
+    padding: 5px 10px;
+    
+  }
+  .special-food{
+    width: 20px;
+    height: 20px;
+    background-color: transparent; 
+    position: absolute;
+  }
+  .special-food::before {
+    content: '\1F354'; /* Burger emoji code */
+  }
