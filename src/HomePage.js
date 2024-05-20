@@ -9,15 +9,23 @@ const HomePage = () => {
   const redirectToMainPage = () => {
     navigate('/main');
   };
+  const redirectToTicTacToe = () => {
+    navigate('/tic-tac-toe');
+  };
+
+  
 
   return (
     <div className="homepage-container">
       <h3 className='heading'>🐍Slither into action with Rattlerun!</h3>
       <div className="button-container">
-        <button onClick={redirectToMainPage}>Fun Begin</button>
+        <button onClick={redirectToMainPage}>Start Rattlerun</button>
+        <button onClick={redirectToTicTacToe}>More Games</button>
+        
       </div>
     </div>
   );
 };
 
 export default HomePage;
+

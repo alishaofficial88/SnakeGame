@@ -6,7 +6,7 @@ import './styles.css';
 
 import eatSound from './apple-munch-40169.mp3';
 import collideSound from './boing-6222.mp3';
-import victorySound from './bonus-points-190035.mp3'; // Import victory sound
+import victorySound from './bonus-points-190035.mp3'; 
 
 const Board = ({ onScoreUpdate }) => {
   const [snake, setSnake] = useState([]);
@@ -23,7 +23,7 @@ const Board = ({ onScoreUpdate }) => {
   const [gamePaused, setGamePaused] = useState(false);
   const [eatAudio] = useState(new Audio(eatSound));
   const [collideAudio] = useState(new Audio(collideSound));
-  const [victoryAudio] = useState(new Audio(victorySound)); // Create audio instance for victory sound
+  const [victoryAudio] = useState(new Audio(victorySound)); 
   const [difficulty, setDifficulty] = useState('Easy');
   const [playCollisionSound, setPlayCollisionSound] = useState(false);
 
@@ -195,7 +195,7 @@ const Board = ({ onScoreUpdate }) => {
     setScore(0);
     setGamePaused(false);
     setPlayCollisionSound(false);
-    // Note: We don't reset high score here
+    
     onScoreUpdate({ currentScore: 0, highScore }); // Update onScoreUpdate with score and high score
   };
 
